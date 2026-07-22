@@ -71,7 +71,6 @@ class TrackingLinkController extends Controller
         ];
 
 
-
         return view(
             'tracking-links.index',
             compact(

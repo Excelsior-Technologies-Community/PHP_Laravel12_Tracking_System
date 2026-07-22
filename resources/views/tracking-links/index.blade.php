@@ -509,10 +509,6 @@
 
 
 
-
-
-
-
 {{-- Pagination --}}
 
 <div class="d-flex justify-content-center">

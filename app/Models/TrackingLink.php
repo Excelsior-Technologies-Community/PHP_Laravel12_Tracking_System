@@ -60,7 +60,6 @@ class TrackingLink extends Model
     }
 
 
-
     // Soft delete link
     public function deleteLink()
     {
