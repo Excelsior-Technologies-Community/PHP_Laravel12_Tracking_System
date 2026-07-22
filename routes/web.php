@@ -41,7 +41,6 @@ Route::get(
     ->name('tracking-links.trash');
 
 
-
 Route::put(
     '/tracking-links/{id}/restore',
     [TrackingLinkController::class, 'restore']
