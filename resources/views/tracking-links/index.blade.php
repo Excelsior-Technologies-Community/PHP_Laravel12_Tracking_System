@@ -15,32 +15,39 @@
     </h1>
 
 
-    <div>
+<div>
 
-        <a href="{{ route('tracking-links.trash') }}"
-            class="btn btn-warning">
+    <a href="{{ route('tracking-links.export', request()->query()) }}"
+        class="btn btn-success">
 
-            <i class="bi bi-trash"></i>
-            Trash
+        <i class="bi bi-file-earmark-spreadsheet"></i>
 
-        </a>
+        Export CSV
 
+    </a>
 
-        <a href="{{ route('tracking-links.create') }}"
-            class="btn btn-primary">
+    <a href="{{ route('tracking-links.trash') }}"
+        class="btn btn-warning">
 
-            <i class="bi bi-plus-circle"></i>
-            Create New Link
+        <i class="bi bi-trash"></i>
 
-        </a>
+        Trash
 
-    </div>
+    </a>
 
+    <a href="{{ route('tracking-links.create') }}"
+        class="btn btn-primary">
+
+        <i class="bi bi-plus-circle"></i>
+
+        Create New Link
+
+    </a>
 
 </div>
 
 
-
+</div>
 
 
 {{-- Statistics Cards --}}
@@ -458,8 +465,6 @@
 
 
                     </a>
-
-
 
 
 
