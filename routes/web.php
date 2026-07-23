@@ -54,3 +54,20 @@ Route::delete(
     [TrackingLinkController::class, 'forceDelete']
 )
     ->name('tracking-links.forceDelete');
+
+
+Route::get(
+    '/tracking-links/{trackingLink}/qr-download',
+    [TrackingLinkController::class, 'downloadQr']
+)->name('tracking-links.qr.download');
+
+
+Route::get(
+    '/tracking-links/{trackingLink}/export-csv',
+    [TrackingLinkController::class, 'exportCsv']
+)->name('tracking-links.export.csv');
+
+Route::get(
+    '/tracking-links-export',
+    [TrackingLinkController::class, 'exportTrackingLinks']
+)->name('tracking-links.export');
