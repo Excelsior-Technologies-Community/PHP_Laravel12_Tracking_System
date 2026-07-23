@@ -125,7 +125,6 @@
                         @endforeach
                     </ul>
                 </div>
-
                 
                 <div class="mb-3">
                     <strong>Devices:</strong>
