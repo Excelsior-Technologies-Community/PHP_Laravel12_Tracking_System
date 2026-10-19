@@ -412,26 +412,18 @@
                 <td>
 
 
-                    @if($link->status=='active')
-
-
-                    <span class="badge bg-success">
-
-                        Active
-
-                    </span>
-
-
+                    @if($link->status == 'deleted')
+                        <span class="badge bg-danger">Deleted</span>
+                    @elseif($link->isExpired())
+                        <span class="badge bg-danger">Expired</span>
                     @else
+                        <span class="badge bg-success">Active</span>
+                    @endif
 
-
-                    <span class="badge bg-danger">
-
-                        Deleted
-
-                    </span>
-
-
+                    @if($link->isPasswordProtected())
+                        <span class="badge bg-warning text-dark ms-1" title="Password Protected">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </span>
                     @endif
 
 

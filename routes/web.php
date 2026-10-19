@@ -23,12 +23,22 @@ Route::resource(
 
 
 
-// Click Tracking
+// Slug availability check (AJAX)
+Route::get(
+    '/tracking-links/check-slug',
+    [TrackingLinkController::class, 'checkSlug']
+)->name('tracking-links.check-slug');
+
+// Click Tracking & Password verification
 Route::get(
     '/track/{slug}',
     [ClickController::class, 'track']
-)
-    ->name('tracking.click');
+)->name('tracking.click');
+
+Route::post(
+    '/track/{slug}/verify-password',
+    [ClickController::class, 'verifyPassword']
+)->name('tracking.verify-password');
 
 
 
