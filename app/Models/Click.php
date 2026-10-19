@@ -18,7 +18,14 @@ class Click extends Model
         'city',
         'device',
         'browser',
-        'platform'
+        'platform',
+        'is_bot',
+        'is_unique',
+    ];
+
+    protected $casts = [
+        'is_bot' => 'boolean',
+        'is_unique' => 'boolean',
     ];
 
     public function trackingLink()
